@@ -24,9 +24,19 @@ var rsvpListener = null;
 var guestbookListener = null;
 
 // Add Firebase project configuration object here
-// var firebaseConfig = {};
-
-// firebase.initializeApp(firebaseConfig);
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "xxxxx",
+    authDomain: "xxxxx",
+    databaseURL: "xxxxx",
+    projectId: "xxxxx",
+    storageBucket: "xxxxx",
+    messagingSenderId: "xxxxx",
+    appId: "xxxxx",
+    measurementId: "xxxxx"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
 
 // FirebaseUI config
 const uiConfig = {
