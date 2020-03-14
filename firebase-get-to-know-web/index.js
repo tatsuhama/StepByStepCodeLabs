@@ -150,3 +150,12 @@ rsvpNo.onclick = () => {
    attending: false
  }).catch(console.error)
 }
+
+// Listen for attendee list
+firebase.firestore()
+  .collection('attendees')
+  .where("attending", "==", true)
+  .onSnapshot(snap => {
+    const newAttendeeCount = snap.docs.length;
+    numberAttending.innerHTML = newAttendeeCount+' people going'; 
+  })
