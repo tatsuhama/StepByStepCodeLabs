@@ -72,9 +72,13 @@ startRsvpButton.addEventListener("click",
 firebase.auth().onAuthStateChanged((user)=> {
   if (user) {
     startRsvpButton.textContent = "LOGOUT"
+    // Show guestbook to logged-in users
+    guestbookContainer.style.display = "block";
   }
   else {
     startRsvpButton.textContent = "RSVP"
+    // Hide guestbook for non-logged-in users
+    guestbookContainer.style.display = "none";
   }
 });
 
